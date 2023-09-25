@@ -7,28 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>formulario</h1>
-    <h2>Um formulario simples</h2>
+    <h1>formulário</h1>
+    <h2>Um formulário simples</h2>
     <section>
-        <form action="index.php" method="post">
+        <form action="" method="post">
 
             <label for="nome">Nome completo:</label>
             <input type="text" name="nome" value="" placeholder="Seu nome">
 
-            <fieldset> <legend>Sexo:</legend>
+            <div id="sexo">
             <input type="radio" id="feminino" name="sexo" value="Feminino">
-            <label for="feminino">Feminino</label>
+            <label for="feminino" id="fieldset">Feminino </label><br>
             <input type="radio" id=indefinido name="sexo" value="Indefinido" checked>
-            <label for="indefinido">Indefinido</label>
-            <label for="masculino">Masculino</label>
+            <label for="indefinido" id="fieldset">Indefinido</label><br>
             <input type="radio" id="masculino" name="sexo" value="Masculino">
-            </fieldset>
+            <label for="masculino" id="fieldset">Masculino</label><br>
+            </div>
 
             <label for="email">E-mail:</label>
-            <input type="email" name="nome" value="" placeholder="EX: SeuNome@gmail.com">
+            <input type="email" name="nome" value="" placeholder="EX: SeuNome@gmail.com"><br>
 
             <label for="telefone">Telefone:</label>
-            <input type="tel" name="telefone" value="" placeholder="(99) 99999-9999">
+            <input type="tel" name="telefone" value="" placeholder="(99) 99999-9999"><br>
 
             <label for="estados">Estado:</label>
             <select name="estados">
