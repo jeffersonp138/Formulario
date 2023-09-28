@@ -10,7 +10,7 @@
     <h1>formulário</h1>
     <h2>Um formulário simples</h2>
     <section>
-        <form action="" method="post">
+        <form action="lista.php" method="post">
 
             <label for="nome">Nome completo:</label>
             <input type="text" name="nome" value="" placeholder="Seu nome">
@@ -25,7 +25,7 @@
             </div>
 
             <label for="email">E-mail:</label>
-            <input type="email" name="nome" value="" placeholder="EX: SeuNome@gmail.com"><br>
+            <input type="email" name="email" value="" placeholder="EX: SeuNome@gmail.com"><br>
 
             <label for="telefone">Telefone:</label>
             <input type="tel" name="telefone" value="" placeholder="(99) 99999-9999"><br>
