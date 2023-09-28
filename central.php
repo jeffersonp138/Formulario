@@ -39,9 +39,9 @@ $sql_query= $mysqli->query($sql) or die($mysqli->error);
             <td><a href="editar.php?codigo=<?php echo $dado['id']; ?>">Editar</a> 
             <a href="excluir.php?codigo=<?php echo $dado['id']; ?>">Excluir</a> </td>
         </tr>
-    </table>    
+       
         <?php }?>
-
+    </table> 
         
 
     </table>
