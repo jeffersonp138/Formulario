@@ -12,7 +12,7 @@
     <section>
         <form action="lista.php" method="post">
 
-            <label for="nome">Nome completo:</label>
+            <label for="nome" class="id_nome">Nome completo:</label>
             <input type="text" name="nome" value="" placeholder="Seu nome">
 
             <div id="sexo">
@@ -30,8 +30,8 @@
             <label for="telefone">Telefone:</label>
             <input type="tel" name="telefone" value="" placeholder="(99) 99999-9999"><br>
 
-            <label for="estados">Estado:</label>
-            <select name="estados">
+            <label for="estados" id="id_estado">Estado:</label>
+            <select name="estados" >
                 <option value=""></option>
                 <option value="RN">RN</option>
                 <option value="RS">RS</option>
