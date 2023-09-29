@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+    *{
+        font-family: Verdana, Geneva, Tahoma, 
+        sans-serif;
+        box-sizing: border-box;
+    }
+
+    /* ELEMENTOS DA INTERFACE */
+
+    body{
+        background-color: #15142b;
+        background-image: linear-gradient(180deg, #7B8CDE, #0AC5D4);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+    }
+    section{
+        width: 95%;
+    }
+
+    table{
+        color: white;
+        border: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: none;
+        width: 100vw;
+        text-align: center;
+        font-display: flex;
+    }
+
+
+    th, td{
+        border: 1px solid black;
+        font-size: medium;
+    }
