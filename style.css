@@ -31,21 +31,20 @@
         color: white;
         text-shadow: 2px 2px 0px #D1BCE3;
         font-size: 55px;
-        padding: 30px 0px 0px 0px;
+        padding: 3px;
+        padding-bottom: 0px;
         margin: 0px;
     } 
     
     h2 {
         color: #D1BCE3;
         margin-top: 0px;
-        margin-bottom: 18px;
+        margin-bottom: 20px;
         font-size: 16px;
     }
 
     section{
-        background-color: white;
         width: 100vw;
-        background-color: #695958;
         color: white;
         padding: 5px;
     }
@@ -57,89 +56,106 @@
     form {
         background-color: rgba(55, 41, 145, 0.2);
         border-radius: 10px;
+        padding: 20px;
     }
 
     label {
         font-size: 1em;
-        padding: 10px 10px;
-        margin: 0px 12px;
+        margin-left: 20%;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
-
+   #id_nome{
+    margin-top: 20px;
+   }
 
     input[type=text], [type=email], [type=tel]{
         width: 60%;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.01);
         font-size: 0.9em;
         color: black;
         padding: 10px 20px;
         margin: 5px 0;
-        border: none;
+        margin-left: 20%;
+        margin-right: 20%;
+        border: 2px solid black;
         border-radius: 4px;
         cursor: pointer;
-        
-        margin-top: 10px;
-        margin-bottom: 10px;
+        outline: none;
+        justify-content: center;
+        display: flex;
 
     }
 
-    input[type=radio]{
-        margin: 0px 10px;
+    input::placeholder{
+        color: #D1BCE3;
     }
 
     label#fieldset{
         font-size: 0.9em;
+        margin-left: 0px;
+
         
     }
 
     #sexo{
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20%;
 
     }
 
 
     input[type=submit] {
-        width: 80%;
-        background-color: #7B8CDE;
+        width: 100%;
+        background-color: #FF8360;
         font-size: 1em;
         color: white;
         padding: 10px 20px;
-        margin: 5px 0;
         border: none;
-        border-radius: 4px;
+        border-radius: 30px;
         cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 10px;
 
     }
 
     input[type=submit]:hover {
-        background-color: #0AC5D4;
+        background-color: #ff8f70;
+        color: black;
 
     }
     select{
+        background-color: rgba(255, 255, 255, 0.01);
+        border: 2px solid black;
         border-radius: 7px;
-        border: none;
         width: 10%;
-        touch-action: cross-slide-x;
-        padding: auto;
         text-align: center;
-        
-        margin-top: 10px;
-        margin-bottom: 10px;
+        outline: none;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #id_estado{
+        margin-right: 0px;
     }
 
     textarea{
         width: 60%;
-        border: none;
-        border-width: 0px;
+        border: 2px solid black;
         border-radius: 7px;
         font-size: 0.9em;
-        
-        margin-top: 1px;
-        margin-bottom: 1px;
-
+        outline: none;
+        margin-bottom: 40px;
+        margin-left: 20%;
+        margin-top: 5px;
+        background-color: rgba(255, 255, 255, 0.01);
     }
+
+
