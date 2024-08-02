@@ -10,10 +10,10 @@
     <h1>formulário</h1>
     <h2>Um formulário simples</h2>
     <section>
-        <form action="lista.php" method="post">
-
-            <label for="nome" class="id_nome">Nome completo:</label>
-            <input type="text" name="nome" value="" placeholder="Seu nome">
+        <div id="mensagemErro" class="mensagem-erro" style="display:none;"></div>
+        <form action="lista.php" method="post" id="form">
+            <label for="nome">Nome completo:</label>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
 
             <div id="sexo">
             <input type="radio" id="feminino" name="sexo" value="Feminino">
@@ -25,14 +25,14 @@
             </div>
 
             <label for="email">E-mail:</label>
-            <input type="email" name="email" value="" placeholder="EX: SeuNome@gmail.com"><br>
+            <input type="email" name="email" id="email" placeholder="EX: SeuNome@gmail.com" required>
 
             <label for="telefone">Telefone:</label>
-            <input type="tel" name="telefone" value="" placeholder="(99) 99999-9999"><br>
+            <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}">
 
             <label for="estados" id="id_estado">Estado:</label>
-            <select name="estados" >
-                <option value=""></option>
+            <select name="estados" required>
+                <option value="" disabled selected>Selecione seu estado</option>
                 <option value="RN">RN</option>
                 <option value="RS">RS</option>
                 <option value="RJ">RJ</option>
@@ -40,7 +40,7 @@
             </select> <br>
             
             <label for="prof">Profissão:</label>
-            <input type="text" name="prof" id="input-prof" list="listprof" placeholder="Dev PHP">
+            <input type="text" name="prof" id="prof" list="listprof" placeholder="Dev PHP" required>
             <datalist id="listprof">
                 <option>Dev</option>
                 <option>Vendedor</option>
@@ -49,11 +49,19 @@
             </datalist><br>
 
             <label for="mensagem">Mensagem:</label>
-            <textarea name="mensagem" id="principal" cols="30" rows="10"></textarea>
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
 
             
         <input type="submit" value="Enviar formulário">
     </form>
     </section>
+    <script>
+        function mostrarErro(mensagem) {
+            var erroDiv = document.getElementById('mensagemErro');
+            erroDiv.style.display = 'block';
+            erroDiv.innerText = mensagem;
+            erroDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
