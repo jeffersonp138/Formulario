@@ -129,12 +129,13 @@
         background-color: rgba(0, 0, 0, 0.3);
         border: 2px solid black;
         border-radius: 7px;
-        width: 10%;
+        width: 12rem;
         text-align: center;
         outline: none;
         margin-bottom: 20px;
         color: white;
         margin: 10px 0;
+        padding: 0.5em;
     }
     select:focus{
         background-color: rgb(255, 255, 255, 0.5);
@@ -156,5 +157,11 @@
         background-color: rgba(0, 0, 0, 0.3);
         color: white;
     }
-
-
+    .mensagem-erro {
+        color: red;
+        font-weight: bold;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid red;
+        background-color: #f8d7da;
+    }
