@@ -165,3 +165,30 @@
         border: 1px solid red;
         background-color: #f8d7da;
     }
+    /* 
+        Estilo da pagina sucesso.html
+    */
+
+  
+    .mensagem-sucesso {
+        color: rgb(2, 32, 2);
+        font-weight: bold;
+        padding: 10px 20px;
+        border: 1px solid green;
+        background-color: rgb(10, 215, 92, 0.5);
+        text-align: center;
+        margin-top: 50px;
+        border-radius: 20px;
+    }
+    .botao-novo-envio {
+        margin-top: 2em;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .botao-novo-envio:hover {
+        background-color: #0056b3;
+    }
