@@ -1,15 +1,6 @@
 <?php
 include('conexao.php');
 
-// Função para exibir mensagens de alerta
-function alerta($msg) {
-    echo '<script type="text/javascript">',
-         'document.getElementById("mensagemErro").style.display = "block";',
-         'document.getElementById("mensagemErro").innerText = "', htmlspecialchars($msg, ENT_QUOTES, 'UTF-8'), '";',
-         'document.getElementById("mensagemErro").scrollIntoView({ behavior: "smooth" });',
-         '</script>';
-}
-
 // Função para validar campos
 function validarCampo($campo, $mensagem) {
     return empty(trim($campo)) ? $mensagem : null;
@@ -41,7 +32,8 @@ $erro = validarCampo($_POST['nome'], 'Escreva seu nome...')
      ?? (isset($_POST['telefone']) && validarTelefone($_POST['telefone']) ? 'Telefone inválido...' : null);
 
 if ($erro) {
-    alerta($erro);
+    // Redireciona para a página de erro com a mensagem como parâmetro
+    header("Location: index.php?error=" . urlencode($erro));
     exit;
 }
 
@@ -63,15 +55,19 @@ try {
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
-        alerta("Enviado com sucesso!");
+        header("Location: sucesso.html");
+        exit;
     } else {
-        alerta("Falha ao enviar o formulário.");
+        header("Location: index.php?error=Falha ao enviar o formulário.");
+        exit;
     }
 
     $stmt->close();
 } catch (Exception $e) {
-    alerta('Erro: ' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8'));
+    header("Location: index.php?error=" . urlencode('Erro: ' . $e->getMessage()));
+    exit;
 }
 
 $mysqli->close();
 ?>
+
