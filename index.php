@@ -10,18 +10,18 @@
     <h1>formulário</h1>
     <h2>Um formulário simples</h2>
     <section>
-        <div id="mensagemErro" class="mensagem-erro" style="display:none;"></div>
+        <div id="mensagemErro" class="mensagem-erro" style="display: none;"></div>
         <form action="lista.php" method="post" id="form">
             <label for="nome">Nome completo:</label>
             <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
 
             <div id="sexo">
             <input type="radio" id="feminino" name="sexo" value="Feminino">
-            <label for="feminino" id="fieldset">Feminino </label><br>
-            <input type="radio" id=indefinido name="sexo" value="Indefinido" checked>
-            <label for="indefinido" id="fieldset">Indefinido</label><br>
+            <label for="feminino">Feminino </label><br>
+            <input type="radio" id="indefinido" name="sexo" value="Indefinido" checked>
+            <label for="indefinido">Indefinido</label><br>
             <input type="radio" id="masculino" name="sexo" value="Masculino">
-            <label for="masculino" id="fieldset">Masculino</label><br>
+            <label for="masculino">Masculino</label><br>
             </div>
 
             <label for="email">E-mail:</label>
@@ -30,7 +30,7 @@
             <label for="telefone">Telefone:</label>
             <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}">
 
-            <label for="estados" id="id_estado">Estado:</label>
+            <label for="estados">Estado:</label>
             <select name="estados" required>
                 <option value="" disabled selected>Selecione seu estado</option>
                 <option value="RN">RN</option>
@@ -51,17 +51,21 @@
             <label for="mensagem">Mensagem:</label>
             <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
 
-            
-        <input type="submit" value="Enviar formulário">
-    </form>
+            <input type="submit" value="Enviar formulário">
+        </form>
     </section>
     <script>
-        function mostrarErro(mensagem) {
-            var erroDiv = document.getElementById('mensagemErro');
-            erroDiv.style.display = 'block';
-            erroDiv.innerText = mensagem;
-            erroDiv.scrollIntoView({ behavior: 'smooth' });
-        }
+        // Função para exibir mensagens de erro, se houver
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            if (error) {
+                const erroDiv = document.getElementById('mensagemErro');
+                erroDiv.style.display = 'block';
+                erroDiv.innerText = decodeURIComponent(error);
+                erroDiv.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
     </script>
 </body>
 </html>
